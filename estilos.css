@@ -1,0 +1,28 @@
+body{
+    background-color: blanchedalmond;
+}
+
+table{
+    background-color: white;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin:auto;
+    text-align: center;
+    /*El border collapse sirve para que las celdas se vean unidas*/
+}
+
+/*Numero de filas*/
+tr{
+    border: 1px solid black;
+}
+
+/*Numero de columnas*/
+td{
+    border: 1px solid black;
+    /*Le da espacio a la celda*/
+    padding:20px;
+}
+
+#dias td{
+    padding:0;
+}
