@@ -38,74 +38,19 @@
         </p> 
         <!--Cellspacing es el espacio que hay de la celda a la tabla-->
         <table border="1" cellspacing="0" cellpadding="20">
-            <tr>
-                <!--Colspan sirve para hacer que una celda ocupe varias columnas de una tabla.-->
-                <th colspan="5">Horario 2ºDAW</th>
-            </tr>
-            <!--Fila 1-->
-            <tr id="dias">
-                <td>Lunes</td>
-                <td>Martes</td>
-                <td>Miércoles</td>
-                <td>Jueves</td>
-                <td>Viernes</td>
-            </tr>
-            <!--Fila 2-->            
-            <tr>
-                <td>IPP2</td>
-                <td>DWENC</td>
-                <td>IPP2</td>
-                <td>DWESV</td>
-                <td>OPT2I</td>
-            </tr>
-            <!--Fila 3-->
-            <tr>
-                <td>DWESV</td>
-                <td>DWENC</td>
-                <td>DWENC</td>
-                <td>DWESV</td>
-                <td>OPT2A</td>
-            </tr>
-            <!--Fila 4-->
-            <tr>
-                <td>DWESV</td>
-                <td>DWESV</td>
-                <td>DWENC</td>
-                <td>DWESV</td>
-                <td>DASP</td>
-            </tr>
-            <!--Fila 5-->
-            <tr>
-                <td>PIMOD</td>
-                <td>DWESV</td>
-                <td>DWESV</td>
-                <td>SASP</td>
-                <td>DWESV</td>
-            </tr>
-            <!--Fila 6-->
-            <tr>
-                <td>DEAPW</td>
-                <td>PIMOD</td>
-                <td>DEAPW</td>
-                <td>OPT</td>
-                <td>DWESV</td>
-            </tr>
-            <!--Fila 7-->
-            <tr>
-                <td>DWENC</td>
-                <td>DEAPW</td>
-                <td>DEAPW</td>
-                <td>IPP2</td>
-                <td>TUTO</td>
-            </tr>
-            <!--Fila 8-->
-            <tr>
-                <td>DWENC</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            <?php
+                foreach ($horario as $numeroFila => $fila) {
+                    echo "<tr>";
+                    foreach ($fila as $celda) {
+                        if (isset($colores[$celda])) {
+                            echo "<td style='background-color:" . $colores[$celda] . "'>" . $celda . "</td>";
+                        } else {
+                            echo "<td>" . $celda . "</td>";
+                        }
+                    }
+                    echo "</tr>";
+                }
+            ?>
         </table>
     </body>
 </html>
