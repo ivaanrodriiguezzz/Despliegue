@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi proyecto | GitHub Pages</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+        }
+
+        header {
+            background: #111827;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #334155;
+        }
+
+        header h2 {
+            color: #60a5fa;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a);
+        }
+
+        .hero-contenido {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #60a5fa;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .boton {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #3b82f6;
+            transform: translateY(-3px);
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 45px;
+        }
+
+        .titulo span {
+            color: #60a5fa;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            border-color: #60a5fa;
+        }
+
+        .icono {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .tarjeta h3 {
+            margin-bottom: 15px;
+            color: #60a5fa;
+        }
+
+        .tarjeta p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        .pasos {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .paso {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background: #1e293b;
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #3b82f6;
+        }
+
+        .numero {
+            background: #2563eb;
+            min-width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .paso h3 {
+            margin-bottom: 7px;
+        }
+
+        .paso p {
+            color: #cbd5e1;
+        }
+
+        .github {
+            text-align: center;
+            background: #111827;
+        }
+
+        .github p {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        .url {
+            display: inline-block;
+            background: #020617;
+            padding: 18px 25px;
+            border-radius: 10px;
+            color: #60a5fa;
+            margin-bottom: 25px;
+            border: 1px solid #334155;
+        }
+
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 800px) {
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .paso {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h2>Mi Proyecto</h2>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#proyecto">Proyecto</a>
+            <a href="#pasos">Pasos</a>
+            <a href="#github">GitHub</a>
+        </nav>
+
+    </header>
+
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-contenido">
+
+            <h1>Bienvenido a <span>mi proyecto</span></h1>
+
+            <p>
+                Esta página ha sido publicada utilizando Git,
+                GitHub y GitHub Pages.
+            </p>
+
+            <a class="boton" href="#proyecto">
+                Ver proyecto
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section id="proyecto">
+
+        <h2 class="titulo">
+            Sobre el <span>proyecto</span>
+        </h2>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+
+                <div class="icono">💻</div>
+
+                <h3>Desarrollo Web</h3>
+
+                <p>
+                    Proyecto desarrollado utilizando tecnologías
+                    web como HTML, CSS y JavaScript.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="icono">🔧</div>
+
+                <h3>Git</h3>
+
+                <p>
+                    Git permite controlar las diferentes versiones
+                    del proyecto y guardar los cambios realizados.
+                </p>
+
+            </div>
+
+
+            <div class="tarjeta">
+
+                <div class="icono">🚀</div>
+
+                <h3>GitHub Pages</h3>
+
+                <p>
+                    GitHub Pages permite publicar nuestra página
+                    web y acceder a ella desde Internet.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="pasos">
+
+        <h2 class="titulo">
+            ¿Cómo se ha <span>publicado?</span>
+        </h2>
+
+        <div class="pasos">
+
+            <div class="paso">
+
+                <div class="numero">1</div>
+
+                <div>
+                    <h3>Crear el proyecto</h3>
+
+                    <p>
+                        Se crea la página web utilizando HTML y CSS.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="paso">
+
+                <div class="numero">2</div>
+
+                <div>
+                    <h3>Subir el proyecto a GitHub</h3>
+
+                    <p>
+                        Los archivos del proyecto se suben a un
+                        repositorio de GitHub.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="paso">
+
+                <div class="numero">3</div>
+
+                <div>
+                    <h3>Configurar GitHub Pages</h3>
+
+                    <p>
+                        Desde Settings → Pages seleccionamos la
+                        rama main y la carpeta raíz.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="paso">
+
+                <div class="numero">4</div>
+
+                <div>
+                    <h3>Publicar</h3>
+
+                    <p>
+                        GitHub genera automáticamente una dirección
+                        web para acceder al proyecto.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="github" id="github">
+
+        <h2 class="titulo">
+            Mi proyecto en <span>GitHub</span>
+        </h2>
+
+        <p>
+            Puedes consultar el código fuente y la versión publicada
+            desde los siguientes enlaces.
+        </p>
+
+        <div class="url">
+            github.com/ivaanrodriiguezzz/Despliegue
+        </div>
+
+        <br>
+
+        <a
+            class="boton"
+            href="https://github.com/ivaanrodriiguezzz/Despliegue"
+            target="_blank">
+            Ver repositorio
+        </a>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Iván Rodríguez Gómez · 2º DAW
+        </p>
+
+    </footer>
+
+</body>
+</html>
